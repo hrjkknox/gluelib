@@ -3,7 +3,7 @@ This is a simple library for interacting with the pastebin API. The code is fair
 (It's called gluelib because pastelib was taken)
 
 ## Terminology
-###Session Keys
+### Session Keys
 When using this library, the first thing to do is generate a session key. This is what you will use instead of a username and password. Call `getSessionKey` with your pastebin username, password, and developer key, and you will receive a session key. This is used in all future API calls. Keep it in memory, and generate a new one for every session. You do not need to use your username and password again.
 
 ### Paste Keys
