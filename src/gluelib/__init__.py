@@ -5,7 +5,10 @@ def outputBytesToString(outputBytes):
 	strVersion = str(outputBytes)
 	strVersion = strVersion[:-1]
 	strVersion = strVersion[2:]
-	strVersion = strVersion.replace("\\r\\n", "\n")
+	strVersion = strVersion.replace("\\r", "")
+	strVersion = strVersion.replace("\\n", "\n")
+	strVersion = strVersion.replace("\\t", "\t")
+	
 	return strVersion
 
 def getSessionKey(username, password, devKey):
@@ -59,4 +62,14 @@ def deletePaste(pasteKey, sessionKey, devKey):
 	output = outputBytesToString(response.content)
 	return output
 
+def listUserPastes(sessionKey, devKey, resultsLimit=50):
+	parameters = {
+		"api_dev_key": devKey,
+		"api_user_key": sessionKey,
+		"api_results_limit": resultsLimit,
+		"api_option": "list"
+	}
+	response = requests.post(url = "https://pastebin.com/api/api_post.php", data = parameters)
+	output = outputBytesToString(response.content)
+	return output
 
