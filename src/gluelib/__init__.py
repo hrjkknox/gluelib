@@ -37,7 +37,7 @@ def getPaste(pasteKey, sessionKey, devKey):
 
 # Posts a paste, and returns the paste ID.
 # Full details are available at https://pastebin.com/api
-def makePaste(pasteName, pasteText, devKey, sessionKey, expiryDate = "N", privacy = "0"):
+def makePaste(pasteName, pasteText, sessionKey, devKey, expiryDate = "N", privacy = "0"):
 	paramaters = {
 		"api_option": "paste",
 		"api_dev_key": devKey,
@@ -73,7 +73,7 @@ def listUserPastes(sessionKey, devKey, resultsLimit=50):
 	output = outputBytesToString(response.content)
 	return output
 
-def getUserData(devKey, sessionKey):
+def getUserData(sessionKey, devKey):
 	parameters = {
 		"api_dev_key": devKey,
 		"api_user_key": sessionKey,

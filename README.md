@@ -15,11 +15,17 @@ These are the parts of a pastebin URL that identify a specific paste. (e.g. `zvw
 ### `getPaste(pasteKey, sessionKey, devKey)`
 Returns the text of a paste given the above parameters.
 
-### `makePaste(pasteName, pasteText, devKey, sessionKey, expiryDate = "N", privacy = "0")`
+### `makePaste(pasteName, pasteText, sessionKey, devKey, expiryDate = "N", privacy = "0")`
 Uploads a paste to pastebin with the above parameters. See [the pastebin API page](https://pastebin.com/doc_api "the pastebin API page") for more detail.
 
 ### `deletePaste(pasteKey, sessionKey, devKey)`
 Deletes a paste given the above parameters.
+
+### `listUserPastes(sessionKey, devKey, resultsLimit=50)`
+Returns information about your pastes in XML format. Will only display last `resultslimit` results.
+
+### `getUserData(sessionKey, devKey)`
+Returns information about your user profile in XML format.
 
 ### `getSessionKey(username, password, devKey)`
 Returns a session key when given a pastebin username, password, and developer key. See the section on session keys for more.
