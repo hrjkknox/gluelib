@@ -73,3 +73,12 @@ def listUserPastes(sessionKey, devKey, resultsLimit=50):
 	output = outputBytesToString(response.content)
 	return output
 
+def getUserData(devKey, sessionKey):
+	parameters = {
+		"api_dev_key": devKey,
+		"api_user_key": sessionKey,
+		"api_option": "userdetails"
+	}
+	response = requests.post(url = "https://pastebin.com/api/api_post.php", data = parameters)
+	output = outputBytesToString(response.content)
+	return output
