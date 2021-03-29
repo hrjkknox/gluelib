@@ -19,6 +19,7 @@ def getSessionKey(username, password, devKey):
 	response = requests.post(url = "https://pastebin.com/api/api_login.php", data = paramaters)
 	# Remove formatting data
 	sessionKey = outputBytesToString(response.content)
+	return sessionKey
 
 def getPaste(pasteKey, sessionKey, devKey):
 	paramaters = {
@@ -57,3 +58,5 @@ def deletePaste(pasteKey, sessionKey, devKey):
 	response = requests.post(url = "https://pastebin.com/api/api_post.php", data = paramaters)
 	output = outputBytesToString(response.content)
 	return output
+
+
