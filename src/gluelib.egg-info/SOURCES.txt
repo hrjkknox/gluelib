@@ -1,8 +1,0 @@
-README.md
-pyproject.toml
-setup.cfg
-src/gluelib/__init__.py
-src/gluelib.egg-info/PKG-INFO
-src/gluelib.egg-info/SOURCES.txt
-src/gluelib.egg-info/dependency_links.txt
-src/gluelib.egg-info/top_level.txt
