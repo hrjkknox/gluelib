@@ -1,5 +1,5 @@
 # gluelib
-This is a simple library for interacting with the pastebin API. The code is fairly simple and self-documenting, and all other information needed is contained within this file. Install with `pip3 install gluelib`.
+This is a simple library for interacting with the pastebin API. The code is fairly simple and self-documenting, and all other information needed is contained within this file. Install with `pip3 install gluelib`. The current version is 1.2.0, and is the only version that should be used.
 
 (It's called gluelib because pastelib was taken)
 
