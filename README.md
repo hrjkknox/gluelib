@@ -33,3 +33,5 @@ Returns a session key when given a pastebin username, password, and developer ke
 ### `outputBytesToString(outputBytes)`
 This function formats a response from the pastebin API. It removes the prefix and suffix bytes, converts the response to a string, and returns it. All other functions in this library pass their output through it. You do not need to use this function in your code.
 
+## TODO
+- Remove functions from `__init__.py` and put them into separate files (and just generally make the structure more conventional)
