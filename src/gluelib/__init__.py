@@ -82,3 +82,10 @@ def getUserData(sessionKey, devKey):
 	response = requests.post(url = "https://pastebin.com/api/api_post.php", data = parameters)
 	output = outputBytesToString(response.content)
 	return output
+
+def makePasteFromFile(pasteName, file, sessionKey, devKey, expiryDate = "N", privacy = "0"):
+	with open(file, "r") as pasteFile:
+		pasteText = pasteFile.read()
+
+	output = makePaste(pasteName, pasteText, sessionKey, devKey, expiryDate = "N", privacy = "0")
+	return output
