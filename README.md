@@ -18,6 +18,9 @@ Returns the text of a paste given the above parameters.
 ### `makePaste(pasteName, pasteText, sessionKey, devKey, expiryDate = "N", privacy = "0")`
 Uploads a paste to pastebin with the above parameters. See [the pastebin API page](https://pastebin.com/doc_api "the pastebin API page") for more detail.
 
+### `makePasteFromFile(pasteName, file, sessionKey, devKey, expiryDate = "N", privacy = "0")`
+The same as `makePaste`, but taking the text from a file.
+
 ### `deletePaste(pasteKey, sessionKey, devKey)`
 Deletes a paste given the above parameters.
 
